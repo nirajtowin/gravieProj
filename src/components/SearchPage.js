@@ -1,11 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import GiantBombService from '../services/GiantBombService';
-
+// Define the SearchPage component
 const SearchPage = ({ onRent }) => {
-    const [searchTerm, setSearchTerm] = useState('');
-    const [searchResults, setSearchResults] = useState([]);
 
+// State to manage the search term input
+const [searchTerm, setSearchTerm] = useState('');
+// State to store the search results
+    const [searchResults, setSearchResults] = useState([]);
+// Function to search games using the GiantBomb API
     const searchGames = async () => {
+        // Call the searchGames function from the GiantBombService
         const results = await GiantBombService.searchGames({
             query: searchTerm,
             format: 'json',
@@ -18,11 +22,12 @@ const SearchPage = ({ onRent }) => {
 
         setSearchResults(results);
     };
-
+    
+// Function to handle renting a game
     const handleRent = (game) => {
         onRent(game);
     };
-
+// Render the SearchPage component
     return (
         <div>
             <input
