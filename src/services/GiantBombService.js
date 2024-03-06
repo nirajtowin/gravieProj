@@ -1,4 +1,3 @@
-// GiantBombService.js
 import axios from 'axios';
 
 const API_BASE_URL = 'http://localhost:3001/api'; // Update with your server's URL
@@ -27,7 +26,7 @@ const GiantBombService = {
             return [];
         }
     },
-    // Add more methods for handling other API requests if needed
+   
 };
 
 export default GiantBombService;
