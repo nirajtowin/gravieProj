@@ -10,7 +10,7 @@ const port = 3001;
 app.use(cors());
 
 // Replace 'YOUR_GIANT_BOMB_API_KEY' with your actual Giant Bomb API key
-const GIANT_BOMB_API_KEY = 'd002591d552660a11c60de59bac4266b7a15006e';
+const GIANT_BOMB_API_KEY = '***********************';
 
 app.use(express.json());
 
