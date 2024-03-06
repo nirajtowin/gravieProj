@@ -5,7 +5,10 @@ const CheckoutPage = ({ rentedGames, onCheckout }) => {
     const [customerName, setCustomerName] = useState('');
     const [checkoutSuccess, setCheckoutSuccess] = useState(false);
 
+    // Function to handle the checkout process
     const handleCheckout = () => {
+
+        // Check if customer name and rented games are provided
         if (customerName && rentedGames.length > 0) {
             // Assuming onCheckout is an asynchronous function
             onCheckout(customerName, rentedGames)
@@ -24,7 +27,7 @@ const CheckoutPage = ({ rentedGames, onCheckout }) => {
 
     // Disable the button if customer name is not provided or no games are rented
     const isButtonDisabled = !customerName || rentedGames.length === 0;
-
+   // Render the CheckoutPage component
     return (
         <div>
             <h2>Checkout</h2>
