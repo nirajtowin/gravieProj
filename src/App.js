@@ -1,6 +1,6 @@
 
 import React, { useState } from 'react';
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';  // Note the addition of `Routes` here
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom'; 
 import SearchPage from './components/SearchPage';
 import CheckoutPage from './components/CheckoutPage';
 
@@ -38,14 +38,14 @@ const App = () => {
               </li>
             </ul>
           </nav>
-          <Routes>  {/* Wrap your routes in a <Routes> component */}
+          <Routes>  {
             <Route
                 path="/"
-                element={<SearchPage onRent={handleRent} />}  // Use the `element` prop instead of `render`
+                element={<SearchPage onRent={handleRent} />}  
             />
             <Route
                 path="/checkout"
-                element={  // Use the `element` prop instead of `render`
+                element={  
                   <CheckoutPage
                       rentedGames={rentedGames}
                       onReturn={handleReturn}
